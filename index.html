@@ -1,0 +1,1292 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Vineet Sahu</title>
+        <meta
+            name="description"
+            content="Portfolio of Vineet Sahu — Software Developer specializing in React, Next.js and TypeScript. 3.5+ years in IT building frontend-focused web applications; learning and experimenting with Three.js."
+        />
+
+        <link rel="icon" type="image/png" href="/icon/32x32.png" />
+
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover"
+        />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icon/180x180.png" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta
+            name="apple-mobile-web-app-title"
+            content="Vineet Sahu – Personal Website"
+        />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+        <meta name="theme-color" content="#f6d4b1" />
+
+        <meta property="og:title" content="Vineet Sahu – Personal Website" />
+        <meta property="og:type" content="website" />
+        <meta
+            name="og:description"
+            content="My name is Vineet Sahu — I’m a software developer with 3.5+ years in IT, focused on building frontend-first, production-ready web applications using React, Next.js and TypeScript. I enjoy experimenting with Three.js to create interactive web visuals."
+        />
+        <link rel="manifest" href="/manifest.json" />
+        <script type="module" src="/src/main.ts"></script>
+    </head>
+
+    <body>
+        <div id="home"></div>
+
+        <canvas class="webgl"></canvas>
+
+        <div id="hero-backup">
+            <h3>Hi there, I’m</h3>
+            <h1>Vineet</h1>
+            <ul>
+                <li>Software Engineer</li>
+                <li>Creative Coder</li>
+            </ul>
+        </div>
+
+        <nav>
+            <div class="menu-btn">
+                <button class="btn" onclick="toggleMenu()">
+                    <svg width="16" height="16">
+                        <rect class="st0" width="16" height="3.2" />
+                        <rect y="6.4" class="st0" width="16" height="3.2" />
+                        <rect y="12.8" class="st0" width="16" height="3.2" />
+                    </svg>
+                </button>
+                <div style="display: flex">
+                    <a
+                        class="btn"
+                        href="https://www.linkedin.com/in/vineetsahu01/"
+                        target="_blank"
+                    >
+                        <svg width="16" height="16">
+                            <path
+                                d="M0.1,2c0-1,0.8-1.8,1.9-1.8c1,0,1.8,0.9,1.8,1.8c0,1-0.8,1.9-1.8,1.9C0.9,3.9,0.1,3.1,0.1,2z M0.1,5h3.7v9.8
+                H0.1V5z"
+                            />
+                            <path
+                                d="M15.9,8.5v6.2h-3.5V9.4c0-0.9-0.6-1.6-1.5-1.6c-0.8,0-1.4,0.6-1.4,1.5v5.5H5.8V5h3.7v1
+                c0.6-0.7,1.6-1.2,2.8-1.2C14.4,4.7,15.9,6.3,15.9,8.5z"
+                            />
+                        </svg>
+                    </a>
+                    <a
+                        class="btn"
+                        href="https://github.com/vineet-00"
+                        target="_blank"
+                    >
+                        <svg width="16" height="16">
+                            <path
+                                d="M10.6,12.9c0-1-0.3-1.6-0.7-2c2.4-0.3,4.9-1.1,4.9-5.2c0-1.1-0.4-2.1-1.1-2.9c0.1-0.3,0.5-1.3-0.1-2.8
+                c0,0-0.9-0.3-3,1.1c-1.7-0.5-3.6-0.5-5.4,0c-2-1.4-3-1.1-3-1.1C1.6,1.4,2,2.5,2.1,2.8C1.4,3.5,1,4.6,1,5.6c0,4.1,2.5,5,4.9,5.3
+                c-0.4,0.4-0.6,0.9-0.7,1.4c-0.6,0.3-2.2,0.7-3.1-0.9c0,0-0.6-1-1.6-1.1c0,0-1.1,0-0.1,0.7c0,0,0.7,0.3,1.1,1.6c0,0,0.6,2.1,3.6,1.5
+                c0,0.9,0,1.8,0,1.8h5.3C10.6,15.9,10.6,14.4,10.6,12.9z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="menu-body" onclick="closeMenu()">
+                <a href="#home" onclick="closeMenu()">Home</a>
+                <a href="#aboutMe" onclick="closeMenu()">About</a>
+                <a href="#projects" onclick="closeMenu()">Projects</a>
+                <a href="#contact" onclick="closeMenu()">Contact</a>
+            </div>
+
+            <div id="tip-scroll">Scroll &#8595;</div>
+        </nav>
+
+        <main>
+            <section>
+                <h1 id="aboutMe">Hi there</h1>
+                <p>
+                    I'm Vineet Sahu — a frontend closer who turns fuzzy product
+                    asks into fast, maintainable, and polished web interfaces. I
+                    specialise in React, Next.js, Astro and TypeScript,
+                    delivering component-first UIs, pragmatic design systems,
+                    and interactive visual work that performs under real-world
+                    load.
+                </p>
+
+                <p>
+                    Need something people remember? I build high-impact
+                    interactions and Three.js visuals, craft micro-interactions
+                    that elevate UX, and ship compact AI-powered tools that
+                    remove busywork and surface value fast.
+                </p>
+
+                <p>
+                    <strong>Outside the code</strong>: I’m curious about design,
+                    economics and emerging tech. I split my time between the
+                    gym, mountain trails, and exploring spirituality and human
+                    behavior. Staying grounded, curious, and disciplined makes
+                    me a better engineer — and a much easier person to build
+                    with.
+                </p>
+            </section>
+
+            <section>
+                <h1 id="projects">Projects</h1>
+                <hr />
+
+                <h2>DataTide</h2>
+                <h3>Visual web scraper</h3>
+
+                <ul class="skills">
+                    <li>Next.js</li>
+                    <li>React</li>
+                    <li>React Flow</li>
+                    <li>Puppeteer</li>
+                    <li>Gemini / OpenAI</li>
+                    <li>PostgreSQL (Neon)</li>
+                    <li>Stripe</li>
+                    <li>TypeScript</li>
+                </ul>
+
+                <p>
+                    DataTide is a no-code / low-code scraper: design workflows
+                    on a React Flow canvas, run headless browser actions, and
+                    convert HTML into structured JSON using prompt-driven models
+                    (Gemini / OpenAI). Built for repeatable pipelines with
+                    secure billing and reliable storage.
+                </p>
+
+                <p>
+                    <a
+                        href="https://github.com/vineet-00/DataTide"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >View code →</a
+                    >
+                </p>
+
+                <div class="cheatsheet-wrapper" style="margin-top: 12px">
+                    <div class="cheatsheet">
+                        <!-- Browser control -->
+                        <div class="cs-item">
+                            <button
+                                class="icon-btn"
+                                aria-describedby="tip-browser"
+                                title="Browser control"
+                                tabindex="0"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect
+                                        x="3"
+                                        y="4"
+                                        width="18"
+                                        height="14"
+                                        rx="2"
+                                    />
+                                    <path d="M3 10h18" />
+                                </svg>
+                            </button>
+                            <div
+                                id="tip-browser"
+                                class="tooltip"
+                                role="tooltip"
+                            >
+                                Launch Puppeteer, navigate pages and capture
+                                full HTML for parsing.
+                            </div>
+                            <div class="cs-text">
+                                <span class="cs-title">Browser control</span>
+                                <span class="cs-note"
+                                    >Launch and drive headless browsers to
+                                    interact with pages.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Element ops -->
+                        <div class="cs-item">
+                            <button
+                                class="icon-btn"
+                                aria-describedby="tip-element"
+                                title="Element operations"
+                                tabindex="0"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M3 3l7.5 15L13 13l8 8" />
+                                </svg>
+                            </button>
+                            <div
+                                id="tip-element"
+                                class="tooltip"
+                                role="tooltip"
+                            >
+                                Extract text, click, fill inputs, scroll and
+                                wait for dynamic elements.
+                            </div>
+                            <div class="cs-text">
+                                <span class="cs-title">Element ops</span>
+                                <span class="cs-note"
+                                    >Selectors, clicks, inputs and waits for
+                                    dynamic content.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- AI extraction -->
+                        <div class="cs-item">
+                            <button
+                                class="icon-btn"
+                                aria-describedby="tip-ai"
+                                title="AI extraction"
+                                tabindex="0"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M12 2v20" />
+                                    <path d="M7 4v4" />
+                                    <path d="M17 4v4" />
+                                    <path d="M7 20v-4" />
+                                    <path d="M17 20v-4" />
+                                </svg>
+                            </button>
+                            <div id="tip-ai" class="tooltip" role="tooltip">
+                                Use Gemini / OpenAI models with prompts to
+                                convert HTML into clean JSON.
+                            </div>
+                            <div class="cs-text">
+                                <span class="cs-title">AI extraction</span>
+                                <span class="cs-note"
+                                    >Prompt-driven HTML → JSON parsing for messy
+                                    pages.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- JSON tooling -->
+                        <div class="cs-item">
+                            <button
+                                class="icon-btn"
+                                aria-describedby="tip-json"
+                                title="JSON tooling"
+                                tabindex="0"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M9 18l-4-6 4-6" />
+                                    <path d="M15 6l4 6-4 6" />
+                                </svg>
+                            </button>
+                            <div id="tip-json" class="tooltip" role="tooltip">
+                                Read/build/transform JSON inside the flow for
+                                flexible output shaping.
+                            </div>
+                            <div class="cs-text">
+                                <span class="cs-title">JSON tooling</span>
+                                <span class="cs-note"
+                                    >In-workflow JSON reads & transforms.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Delivery & storage -->
+                        <div class="cs-item">
+                            <button
+                                class="icon-btn"
+                                aria-describedby="tip-deliver"
+                                title="Delivery & storage"
+                                tabindex="0"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                    />
+                                    <polyline points="7 10 12 5 17 10" />
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                </svg>
+                            </button>
+                            <div
+                                id="tip-deliver"
+                                class="tooltip"
+                                role="tooltip"
+                            >
+                                Post to webhooks or persist results to
+                                PostgreSQL (Neon) via Prisma.
+                            </div>
+                            <div class="cs-text">
+                                <span class="cs-title">Delivery & storage</span>
+                                <span class="cs-note"
+                                    >Webhook delivery or DB persistence for
+                                    downstream use.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Billing & security -->
+                        <div class="cs-item">
+                            <button
+                                class="icon-btn"
+                                aria-describedby="tip-billing"
+                                title="Billing & security"
+                                tabindex="0"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect
+                                        x="2"
+                                        y="5"
+                                        width="20"
+                                        height="14"
+                                        rx="2"
+                                    />
+                                    <line x1="2" y1="10" x2="22" y2="10" />
+                                </svg>
+                            </button>
+                            <div
+                                id="tip-billing"
+                                class="tooltip"
+                                role="tooltip"
+                            >
+                                Stripe integration for secure subscriptions;
+                                view monthly credit consumption and billing
+                                history from the billing page.
+                            </div>
+                            <div class="cs-text">
+                                <span class="cs-title">Billing & security</span>
+                                <span class="cs-note"
+                                    >Stripe-based subscriptions, secure
+                                    endpoints, and credit consumption
+                                    reports.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Quick workflow -->
+                        <div class="cs-item">
+                            <button
+                                class="icon-btn"
+                                aria-describedby="tip-quick"
+                                title="Quick workflow"
+                                tabindex="0"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
+                            </button>
+                            <div id="tip-quick" class="tooltip" role="tooltip">
+                                Drag nodes, set selectors/prompts, run —
+                                Puppeteer + Gemini produce ready JSON.
+                            </div>
+                            <div class="cs-text">
+                                <span class="cs-title">Quick workflow</span>
+                                <span class="cs-note"
+                                    >Design, run, and export — repeatable
+                                    pipelines in minutes.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Scheduling -->
+                        <div class="cs-item">
+                            <button
+                                class="icon-btn"
+                                aria-describedby="tip-schedule"
+                                title="Scheduling"
+                                tabindex="0"
+                            >
+                                <!-- calendar/clock svg -->
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect
+                                        x="3"
+                                        y="4"
+                                        width="18"
+                                        height="18"
+                                        rx="2"
+                                    ></rect>
+                                    <path d="M16 2v4"></path>
+                                    <path d="M8 2v4"></path>
+                                    <path d="M3 10h18"></path>
+                                </svg>
+                            </button>
+                            <div
+                                id="tip-schedule"
+                                class="tooltip"
+                                role="tooltip"
+                            >
+                                Schedule workflows using cron expressions — runs
+                                automatically at the defined times.
+                            </div>
+                            <div class="cs-text">
+                                <span class="cs-title">Scheduling</span>
+                                <span class="cs-note"
+                                    >Set cron expressions to run workflows
+                                    automatically on schedule.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Homepage status & daily credits -->
+                        <div class="cs-item">
+                            <button
+                                class="icon-btn"
+                                aria-describedby="tip-home-status"
+                                title="Homepage status"
+                                tabindex="0"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M3 12h18" />
+                                    <path d="M3 6h18" />
+                                    <path d="M3 18h18" />
+                                </svg>
+                            </button>
+                            <div
+                                id="tip-home-status"
+                                class="tooltip"
+                                role="tooltip"
+                            >
+                                Quick homepage overview: workflow execution
+                                status and daily credit spend so you can spot
+                                issues at a glance.
+                            </div>
+                            <div class="cs-text">
+                                <span class="cs-title">Homepage status</span>
+                                <span class="cs-note"
+                                    >Execution health and daily credit usage
+                                    surfaced on the homepage dashboard.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Execution logs (in run details) -->
+                        <div class="cs-item">
+                            <button
+                                class="icon-btn"
+                                aria-describedby="tip-logs"
+                                title="Execution logs"
+                                tabindex="0"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M4 6h16" />
+                                    <path d="M4 12h10" />
+                                    <path d="M4 18h7" />
+                                </svg>
+                            </button>
+                            <div id="tip-logs" class="tooltip" role="tooltip">
+                                Inspect per-node logs inside each workflow run's
+                                details—useful for debugging and replaying
+                                failures.
+                            </div>
+                            <div class="cs-text">
+                                <span class="cs-title">Execution logs</span>
+                                <span class="cs-note"
+                                    >Per-node run logs surfaced in the run
+                                    details view for easy debugging.</span
+                                >
+                            </div>
+                        </div>
+                        <!-- Runs history -->
+                        <div class="cs-item">
+                            <button
+                                class="icon-btn"
+                                aria-describedby="tip-history"
+                                title="Runs history"
+                                tabindex="0"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M12 8v5l3 3" />
+                                    <circle cx="12" cy="12" r="9" />
+                                </svg>
+                            </button>
+                            <div
+                                id="tip-history"
+                                class="tooltip"
+                                role="tooltip"
+                            >
+                                Full history of workflow runs with timestamps,
+                                status and outcome metadata.
+                            </div>
+                            <div class="cs-text">
+                                <span class="cs-title">Runs history</span>
+                                <span class="cs-note"
+                                    >Browse past runs and their results —
+                                    helpful for audits and re-runs.</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Credentials (encrypted) -->
+                        <div class="cs-item">
+                            <button
+                                class="icon-btn"
+                                aria-describedby="tip-creds"
+                                title="Credentials"
+                                tabindex="0"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect
+                                        x="3"
+                                        y="8"
+                                        width="18"
+                                        height="12"
+                                        rx="2"
+                                    />
+                                    <path d="M7 8V6a5 5 0 0 1 10 0v2" />
+                                </svg>
+                            </button>
+                            <div id="tip-creds" class="tooltip" role="tooltip">
+                                Manage API keys / credentials; values are
+                                encrypted in the DB using server-side crypto
+                                before storing.
+                            </div>
+                            <div class="cs-text">
+                                <span class="cs-title">Credentials</span>
+                                <span class="cs-note"
+                                    >Add or switch credentials (encrypted at
+                                    rest) for AI / external services.</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="dt-carousel" aria-roledescription="carousel">
+                    <div
+                        class="dt-carousel-main"
+                        tabindex="0"
+                        role="region"
+                        aria-label="DataTide screenshots carousel"
+                    >
+                        <button
+                            class="dt-prev btn"
+                            aria-label="Previous screenshot"
+                            type="button"
+                        >
+                            ‹
+                        </button>
+
+                        <div
+                            class="dt-slide"
+                            data-index="0"
+                            aria-hidden="false"
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label="Screenshot 1 of 11"
+                        >
+                            <img
+                                src="/src/img/01Homepage.png"
+                                alt="DataTide Homepage"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div
+                            class="dt-slide"
+                            data-index="1"
+                            aria-hidden="true"
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label="Screenshot 2 of 11"
+                        >
+                            <img
+                                src="/src/img/02Workflows.png"
+                                alt="DataTide Workflows page"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div
+                            class="dt-slide"
+                            data-index="2"
+                            aria-hidden="true"
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label="Screenshot 3 of 11"
+                        >
+                            <img
+                                src="/src/img/03DefinedWorkflow.png"
+                                alt="Workflow page"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div
+                            class="dt-slide"
+                            data-index="3"
+                            aria-hidden="true"
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label="Screenshot 4 of 11"
+                        >
+                            <img
+                                src="/src/img/04Executedlogs.png"
+                                alt="Workflow Execution logs"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div
+                            class="dt-slide"
+                            data-index="4"
+                            aria-hidden="true"
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label="Screenshot 5 of 11"
+                        >
+                            <img
+                                src="/src/img/05RunsHistory.png"
+                                alt="Workflow Execution History"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div
+                            class="dt-slide"
+                            data-index="5"
+                            aria-hidden="true"
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label="Screenshot 6 of 11"
+                        >
+                            <img
+                                src="/src/img/06Schedule.png"
+                                alt="Workflow Schedule"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div
+                            class="dt-slide"
+                            data-index="6"
+                            aria-hidden="true"
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label="Screenshot 7 of 11"
+                        >
+                            <img
+                                src="/src/img/07Scheduled.png"
+                                alt="Workflows Page with Scheduled Workflow"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div
+                            class="dt-slide"
+                            data-index="7"
+                            aria-hidden="true"
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label="Screenshot 8 of 11"
+                        >
+                            <img
+                                src="/src/img/08Credentials.png"
+                                alt="Credentials Page"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div
+                            class="dt-slide"
+                            data-index="8"
+                            aria-hidden="true"
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label="Screenshot 9 of 11"
+                        >
+                            <img
+                                src="/src/img/09CreateCreds.png"
+                                alt="Create Credentials"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div
+                            class="dt-slide"
+                            data-index="9"
+                            aria-hidden="true"
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label="Screenshot 10 of 11"
+                        >
+                            <img
+                                src="/src/img/10Billing.png"
+                                alt="Billing Page"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div
+                            class="dt-slide"
+                            data-index="10"
+                            aria-hidden="true"
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label="Screenshot 11 of 11"
+                        >
+                            <img
+                                src="/src/img/11BillingHistory.png"
+                                alt="Billing History"
+                                loading="lazy"
+                            />
+                        </div>
+
+                        <button
+                            class="dt-next btn"
+                            aria-label="Next screenshot"
+                            type="button"
+                        >
+                            ›
+                        </button>
+                    </div>
+
+                    <div
+                        class="dt-counter"
+                        aria-live="polite"
+                        aria-atomic="true"
+                    >
+                        <span class="dt-counter-current">1</span
+                        ><span class="dt-counter-sep"> of </span
+                        ><span class="dt-counter-total">11</span>
+                    </div>
+                </div>
+
+                <hr />
+
+                <h2>Creative p5.js Collection</h2>
+                <h3>Interactive experiments</h3>
+
+                <ul class="skills">
+                    <li>p5.js</li>
+                    <li>JavaScript</li>
+                    <li>Generative Art</li>
+                    <li>Simulations</li>
+                    <li>Games</li>
+                    <li>WEBGL</li>
+                    <li>Data Viz</li>
+                </ul>
+
+                <p>
+                    A compact sketchbook of 50+ playable p5.js projects:
+                    pathfinding and flow-field simulations, generative systems
+                    (fractal trees, phyllotaxis, Mandelbrot), small games
+                    (Asteroid Destroyer, Snake), and data demos (AFINN
+                    sentiment, TF–IDF). Each sketch is runnable in the browser
+                    with source available.
+                </p>
+                <p>
+                    <a href="https://vineet-00.github.io/p5/">
+                        View Project →
+                    </a>
+                </p>
+
+                <button
+                    class="collapse-btn btn"
+                    collapsed="true"
+                    onclick="this.setAttribute('collapsed', this.getAttribute('collapsed') === 'true'? 'false' : 'true')"
+                >
+                    more...
+                </button>
+
+                <div class="collapse-body">
+                    <p>
+                        The collection is intentionally concise and exploratory:
+                        small, single-purpose sketches that make algorithms and
+                        motion feel immediate. Many demos are meant for learning
+                        — the code prioritises clarity so you can read, tweak
+                        and replay quickly.
+                    </p>
+                    <p>
+                        If you want, I can add short README notes for a handful
+                        of highlight sketches (what it demonstrates, the key
+                        idea, and where the source is). Tell me which ones and
+                        I’ll draft them.
+                    </p>
+                </div>
+
+                <br />
+
+                <div class="image">
+                    <img
+                        src="src/img/creative-01.png"
+                        width="100%"
+                        alt="p5 sketch screenshot"
+                        loading="lazy"
+                        style="aspect-ratio: 16 / 9; margin-top: 12px"
+                    />
+                </div>
+
+                <hr />
+
+                <h2>RenderDesk (This Website)</h2>
+
+                <ul class="skills">
+                    <li>TypeScript</li>
+                    <li>WebGL</li>
+                    <li>Shader Language</li>
+                    <li>Web Dev</li>
+                </ul>
+
+                <p>
+                    A compact, playful portfolio built in TypeScript and
+                    Three.js that doubles as a small playground: an interactive
+                    3D retro computer, a tiny UNIX-like shell, a virtual file
+                    system, a Markdown interpreter/renderer and a custom
+                    text-layout engine. Focused on performance, progressive
+                    enhancement and hands-on interaction.
+                </p>
+
+                <hr />
+
+                <h2>Issue Tracking App</h2>
+                <h3>Issue management</h3>
+
+                <ul class="skills">
+                    <li>Next.js</li>
+                    <li>TypeScript</li>
+                    <li>PostgreSQL</li>
+                    <li>TailwindCSS</li>
+                </ul>
+
+                <p>
+                    A focused issue-tracking app (in the spirit of Linear)
+                    implementing authentication and the core issue workflows:
+                    create, view, edit and delete issues. Built with Next.js +
+                    TypeScript, styled with TailwindCSS and persisted to
+                    PostgreSQL (Instagres). The UI is lightweight and the API is
+                    minimal and secure — designed for clear, fast issue
+                    management.
+                </p>
+
+                <button
+                    class="collapse-btn btn"
+                    collapsed="true"
+                    onclick="this.setAttribute('collapsed', this.getAttribute('collapsed') === 'true'? 'false' : 'true')"
+                >
+                    more...
+                </button>
+
+                <div class="collapse-body">
+                    <p>
+                        Key features: user authentication, issue creation with
+                        title/description/labels/assignee, inline editing,
+                        soft/hard delete options, and an issues list with simple
+                        filters. The app emphasises straightforward UX and a
+                        small, auditable server surface for easy maintenance.
+                    </p>
+                </div>
+
+                <br />
+
+                <div class="image">
+                    <img
+                        src="/src/img/home.png"
+                        width="100%"
+                        alt="Issue Tracking App screenshot"
+                        loading="lazy"
+                        style="aspect-ratio: 16 / 9"
+                    />
+
+                    <img
+                        src="/src/img/dashboard.png"
+                        width="100%"
+                        alt="Issue tracker screenshot 2"
+                        loading="lazy"
+                        style="aspect-ratio: 16 / 9; margin-top: 12px"
+                    />
+                </div>
+
+                <hr />
+
+                <h2>Zentry</h2>
+                <h3>Motion design</h3>
+
+                <ul class="skills">
+                    <li>React</li>
+                    <li>GSAP</li>
+                    <li>TailwindCSS</li>
+                    <li>Motion Systems</li>
+                </ul>
+
+                <p>
+                    A personal interpretation inspired by the Awwwards-winning
+                    Zentry — a motion-first landing built with React, GSAP and
+                    Tailwind. The focus is on smooth, scroll-driven transitions,
+                    layered parallax, and reusable motion primitives that make
+                    the interface feel alive without getting in the way.
+                </p>
+                <p>
+                    <a href="https://vineet-00.github.io/zentry-animation/">
+                        View Project →
+                    </a>
+                </p>
+                <button
+                    class="collapse-btn btn"
+                    collapsed="true"
+                    onclick="this.setAttribute('collapsed', this.getAttribute('collapsed') === 'true'? 'false' : 'true')"
+                >
+                    more...
+                </button>
+
+                <div class="collapse-body">
+                    <p>
+                        Built as a motion-system experiment: scroll-synced
+                        timelines, staggered reveals, and hardware-friendly
+                        transforms. Accessibility and performance are
+                        considered—reduced-motion support, lazy assets, and
+                        lightweight animation hooks. This project is about
+                        turning a high-concept design into small, reusable
+                        React+GSAP patterns.
+                    </p>
+                </div>
+
+                <br />
+
+                <div class="image">
+                    <video
+                        width="100%"
+                        autoplay
+                        loop
+                        muted
+                        controls
+                        playsinline
+                        preload="auto"
+                        poster="/src/img/zentry-poster.png"
+                        style="margin-top: 12px"
+                    >
+                        <source src="/src/img/zentry.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <hr />
+                <p>
+                    This represents just a small selection of the projects I
+                    have worked on over the years. I have many more pieces of
+                    personal work.
+                </p>
+            </section>
+
+            <section>
+                <h1 id="contact">Contact</h1>
+                <p style="text-align: center">
+                    Reach out on
+                    <a
+                        href="mailto:vineetsahu1901@gmail.com?subject=Website%20Contact&body=Hi%20Vineet%2C%0A%0AI%20saw%20your%20portfolio%20and%20..."
+                        aria-label="Email Vineet with subject"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <u><b>Email</b></u>
+                    </a>
+                </p>
+            </section>
+        </main>
+
+        <input type="text" id="textarea" readonly />
+        <div id="loading">
+            <h2>Booting...</h2>
+            <div id="loading-bar">
+                <div id="loading-bar-progress"></div>
+            </div>
+            <div id="loading-items">Starting...</div>
+        </div>
+        <footer>
+            <div>Built with TypeScript & Three.js.</div>
+            <div>A digital experience shaped by code and curiosity.</div>
+            <div>COPYRIGHT © 2025 Vineet Sahu.</div>
+        </footer>
+        <script>
+            function closeMenu() {
+                document
+                    .getElementsByTagName("nav")[0]
+                    .classList.remove(["active"]);
+            }
+
+            function toggleMenu() {
+                const nav = document.getElementsByTagName("nav")[0];
+                if (nav.classList.contains("active")) {
+                    nav.classList.remove(["active"]);
+                } else {
+                    nav.classList.add("active");
+                }
+            }
+        </script>
+        <script
+            fetchpriority="high"
+            src="https://cdn-ts.netlify.app/webgl-helper@3.0.11/webgl-helper.min.js"
+        ></script>
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-EDNKHGV4HB"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-EDNKHGV4HB");
+            gtag("event", "origin", { name: window.origin });
+        </script>
+        <script>
+            (function () {
+                const carousel = document.querySelector(".dt-carousel");
+                if (!carousel) return;
+
+                const slides = Array.from(
+                    carousel.querySelectorAll(".dt-slide"),
+                );
+                const prevBtn = carousel.querySelector(".dt-prev");
+                const nextBtn = carousel.querySelector(".dt-next");
+                const main = carousel.querySelector(".dt-carousel-main");
+                const counterCurr = carousel.querySelector(
+                    ".dt-counter-current",
+                );
+                const counterTotal =
+                    carousel.querySelector(".dt-counter-total");
+
+                let current = 0;
+                const TRANSITION_MS = 600;
+                let isTransitioning = false;
+
+                function computeRenderedHeight(img) {
+                    if (!img) return 0;
+                    if (!img.naturalWidth)
+                        return img.getBoundingClientRect().height || 0;
+                    const effectiveWidth = Math.min(
+                        carousel.clientWidth || window.innerWidth,
+                        1200,
+                    );
+                    return Math.round(
+                        (img.naturalHeight / img.naturalWidth) * effectiveWidth,
+                    );
+                }
+
+                function setContainerHeightFor(index) {
+                    const img =
+                        slides[index] && slides[index].querySelector("img");
+                    if (!img) return;
+                    if (!img.complete) {
+                        img.addEventListener("load", function onLoad() {
+                            img.removeEventListener("load", onLoad);
+                            const h = computeRenderedHeight(img);
+                            main.style.height = h ? h + "px" : "auto";
+                        });
+                        return;
+                    }
+                    const h = computeRenderedHeight(img);
+                    main.style.height = h ? h + "px" : "auto";
+                }
+
+                function updateCounter() {
+                    if (counterCurr)
+                        counterCurr.textContent = String(current + 1);
+                    if (counterTotal)
+                        counterTotal.textContent = String(slides.length);
+                }
+
+                function show(index) {
+                    if (isTransitioning) return;
+                    index = (index + slides.length) % slides.length;
+                    if (index === current) return;
+
+                    isTransitioning = true;
+                    const prev = current;
+                    const next = index;
+
+                    setContainerHeightFor(next);
+
+                    // prepare next slide
+                    slides[next].classList.add("active");
+                    slides[next].setAttribute("aria-hidden", "false");
+
+                    // allow paint then remove previous active
+                    requestAnimationFrame(() => {
+                        slides[prev].classList.remove("active");
+                        slides[prev].setAttribute("aria-hidden", "true");
+                        current = next;
+                        updateCounter();
+
+                        setTimeout(() => {
+                            isTransitioning = false;
+                        }, TRANSITION_MS + 50);
+                    });
+                }
+
+                prevBtn &&
+                    prevBtn.addEventListener("click", () => {
+                        const nextIndex =
+                            (current - 1 + slides.length) % slides.length;
+                        show(nextIndex);
+                    });
+
+                nextBtn &&
+                    nextBtn.addEventListener("click", () => {
+                        const nextIndex = (current + 1) % slides.length;
+                        show(nextIndex);
+                    });
+
+                main &&
+                    main.addEventListener("keydown", (e) => {
+                        if (e.key === "ArrowLeft") {
+                            e.preventDefault();
+                            const nextIndex =
+                                (current - 1 + slides.length) % slides.length;
+                            show(nextIndex);
+                        }
+                        if (e.key === "ArrowRight") {
+                            e.preventDefault();
+                            const nextIndex = (current + 1) % slides.length;
+                            show(nextIndex);
+                        }
+                    });
+
+                document.addEventListener("keydown", (e) => {
+                    const tag =
+                        document.activeElement &&
+                        document.activeElement.tagName;
+                    if (
+                        tag === "INPUT" ||
+                        tag === "TEXTAREA" ||
+                        document.activeElement.isContentEditable
+                    )
+                        return;
+                    if (e.key === "ArrowLeft") {
+                        const nextIndex =
+                            (current - 1 + slides.length) % slides.length;
+                        show(nextIndex);
+                    }
+                    if (e.key === "ArrowRight") {
+                        const nextIndex = (current + 1) % slides.length;
+                        show(nextIndex);
+                    }
+                });
+
+                let resizeTimer = null;
+                window.addEventListener("resize", () => {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(() => {
+                        setContainerHeightFor(current);
+                    }, 120);
+                });
+
+                slides.forEach((s, i) => {
+                    if (i === current) {
+                        s.classList.add("active");
+                        s.setAttribute("aria-hidden", "false");
+                    } else {
+                        s.classList.remove("active");
+                        s.setAttribute("aria-hidden", "true");
+                    }
+                });
+
+                const firstImg = slides[0] && slides[0].querySelector("img");
+                if (firstImg && !firstImg.complete) {
+                    firstImg.addEventListener("load", function onLoad() {
+                        firstImg.removeEventListener("load", onLoad);
+                        setContainerHeightFor(0);
+                    });
+                } else {
+                    setContainerHeightFor(0);
+                }
+
+                updateCounter();
+            })();
+        </script>
+    </body>
+</html>
