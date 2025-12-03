@@ -1,14 +1,13 @@
 {
   "author": {
-    "name": "Ed Hinrichsen",
-    "url": "https://www.edwardh.io"
+    "name": "Vineet Sahu"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edhinrichsen/retro-computer-website.git"
+    "url": "git+https://github.com/vineet-00/renderDesk.git"
   },
   "license": "MIT",
-  "name": "retro-computer-website",
+  "name": "renderDesk",
   "version": "1.0.0",
   "type": "module",
   "scripts": {

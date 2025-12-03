@@ -1,4 +1,4 @@
-!(/images/ed-title.png?aspect=2&noflow=true&width=1.33)
+!(/images/vin-title.png?aspect=2&noflow=true&width=1.33)
 
 
 ##   Hi there,
