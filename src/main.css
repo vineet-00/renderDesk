@@ -7,13 +7,13 @@
 
 @font-face {
     font-family: public-pixel;
-    src: url("/fonts/public-pixel.woff");
-}
-@font-face {
-    font-family: chill;
-    src: url("/fonts/chill.woff");
+    src: url("/renderDesk/fonts/public-pixel.woff") format("woff");
 }
 
+@font-face {
+    font-family: chill;
+    src: url("/renderDesk/fonts/chill.woff") format("woff");
+}
 * {
     margin: 0;
     padding: 0;

@@ -14,7 +14,7 @@ import { Assists } from "../loader";
 export default function ScreenRenderEngine(
   assists: Assists,
   renderer: THREE.WebGLRenderer,
-  sceneRTT: THREE.Scene
+  sceneRTT: THREE.Scene,
 ) {
   const resolution = 512 + 64;
 
@@ -46,7 +46,7 @@ export default function ScreenRenderEngine(
     new THREE.Vector2(128, 128),
     1.1,
     0.4,
-    0
+    0,
   );
   composer.addPass(bloomPass);
 
@@ -73,7 +73,13 @@ export default function ScreenRenderEngine(
   // **********************************
 
   const environmentMapTexture = assists.environmentMapTexture;
-  environmentMapTexture.encoding = THREE.sRGBEncoding;
+  if (environmentMapTexture) {
+    environmentMapTexture.encoding = THREE.sRGBEncoding;
+  } else {
+    console.warn(
+      "environmentMapTexture is undefined — encoding not set (check asset path/network).",
+    );
+  }
 
   const shaderToScreen = new ShaderToScreen(
     {
@@ -86,10 +92,21 @@ export default function ScreenRenderEngine(
       fragmentShader: noiseFragmentShader,
     },
     resolution * 1.33,
-    resolution
+    resolution,
   );
 
-  shaderToScreen.outputTexture.texture.encoding = THREE.sRGBEncoding;
+  if (
+    shaderToScreen &&
+    shaderToScreen.outputTexture &&
+    shaderToScreen.outputTexture.texture
+  ) {
+    shaderToScreen.outputTexture.texture.encoding = THREE.sRGBEncoding;
+  } else {
+    console.warn(
+      "shaderToScreen.outputTexture.texture is undefined — skipping encoding set.",
+    );
+  }
+
   const material = new THREE.MeshStandardMaterial();
   material.metalness = 0;
   material.roughness = 0.125;

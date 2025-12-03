@@ -16,6 +16,8 @@ type Assists = {
   environmentMapTexture: THREE.CubeTexture;
 };
 
+const base = import.meta.env.BASE_URL || "/";
+
 function loadAssists(callback: (assists: Assists) => any) {
   const assists: any = {};
 
@@ -33,7 +35,7 @@ function loadAssists(callback: (assists: Assists) => any) {
         itemsLoaded +
         " of " +
         itemsTotal +
-        " files."
+        " files.",
     );
   };
 
@@ -64,66 +66,93 @@ function loadAssists(callback: (assists: Assists) => any) {
         itemsLoaded +
         " of " +
         itemsTotal +
-        " files."
+        " files.",
     );
   };
 
   // Fonts
   const fontLoader = new FontLoader(manager);
-  fontLoader.load("/fonts/public-pixel.json", (font) => {
-    assists.publicPixelFont = font;
-  });
-  fontLoader.load("/fonts/chill.json", (font) => {
-    assists.chillFont = font;
-  });
+  fontLoader.load(
+    `${base}fonts/public-pixel.json`,
+    (font) => {
+      console.log("public-pixel font loaded:", font instanceof Font, font);
+      assists.publicPixelFont = font;
+    },
+    undefined,
+    (err) => console.error("public-pixel font load error", err),
+  );
+
+  fontLoader.load(
+    `${base}fonts/chill.json`,
+    (font) => {
+      console.log("chill font loaded:", font instanceof Font, font);
+      assists.chillFont = font;
+    },
+    undefined,
+    (err) => console.error("chill font load error", err),
+  );
 
   // Texture
 
   // Texture
   const textureLoader = new THREE.TextureLoader(manager);
-  textureLoader.load("/textures/bake-quality-5.jpg", (tex) => {
-    tex.flipY = false;
-    tex.encoding = THREE.sRGBEncoding;
-    assists.bakeTexture = tex;
-  });
+  textureLoader.load(
+    `${base}textures/bake-quality-5.jpg`,
+    (tex) => {
+      tex.flipY = false;
+      tex.encoding = THREE.sRGBEncoding;
+      assists.bakeTexture = tex;
+      console.log("bake-quality-5 loaded");
+    },
+    undefined,
+    (err) => console.error("bake-quality-5 load error", err),
+  );
 
-  textureLoader.load("/textures/bake_floor-quality-3.jpg", (tex) => {
-    tex.flipY = false;
-    tex.encoding = THREE.sRGBEncoding;
-    assists.bakeFloorTexture = tex;
-  });
+  textureLoader.load(
+    `${base}textures/bake_floor-quality-3.jpg`,
+    (tex) => {
+      tex.flipY = false;
+      tex.encoding = THREE.sRGBEncoding;
+      assists.bakeFloorTexture = tex;
+      console.log("bake-floor loaded");
+    },
+    undefined,
+    (err) => console.error("bake-floor load error", err),
+  );
 
   const cubeTextureLoader = new THREE.CubeTextureLoader(manager);
 
   cubeTextureLoader.load(
     [
-      `/textures/environmentMap/px.jpg`,
-      `/textures/environmentMap/nx.jpg`,
-      `/textures/environmentMap/py.jpg`,
-      `/textures/environmentMap/ny.jpg`,
-      `/textures/environmentMap/pz.jpg`,
-      `/textures/environmentMap/nz.jpg`,
+      `${base}textures/environmentMap/px.jpg`,
+      `${base}textures/environmentMap/nx.jpg`,
+      `${base}textures/environmentMap/py.jpg`,
+      `${base}textures/environmentMap/ny.jpg`,
+      `${base}textures/environmentMap/pz.jpg`,
+      `${base}textures/environmentMap/nz.jpg`,
     ],
     (tex) => {
+      console.log("environment map loaded", tex);
       assists.environmentMapTexture = tex;
-    }
+    },
+    undefined,
+    (err) => console.error("environment map load error", err),
   );
 
   // Mesh
   const gltfLoader = new GLTFLoader(manager);
-  gltfLoader.load("/models/Commodore710_33.5.glb", (gltf) => {
+  gltfLoader.load(`${base}models/Commodore710_33.5.glb`, (gltf) => {
     assists.screenMesh = gltf.scene.children.find((m) => m.name === "Screen");
     assists.computerMesh = gltf.scene.children.find(
-      (m) => m.name === "Computer"
+      (m) => m.name === "Computer",
     );
     assists.crtMesh = gltf.scene.children.find((m) => m.name === "CRT");
     assists.keyboardMesh = gltf.scene.children.find(
-      (m) => m.name === "Keyboard"
+      (m) => m.name === "Keyboard",
     );
     assists.shadowPlaneMesh = gltf.scene.children.find(
-      (m) => m.name === "ShadowPlane"
+      (m) => m.name === "ShadowPlane",
     );
- 
   });
 }
 

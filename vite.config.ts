@@ -1,8 +1,9 @@
 import { defineConfig } from "vite";
 import checker from "vite-plugin-checker";
 
-// https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === "serve" ? "/" : "/renderDesk/",
+  assetsInclude: ["**/*.gltf", "**/*.glb"],
   plugins: [checker({ typescript: true })],
   worker: {},
   build: {
@@ -13,4 +14,4 @@ export default defineConfig({
     port: 1234,
     host: "localhost",
   },
-});
+}));
