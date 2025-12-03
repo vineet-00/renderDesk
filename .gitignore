@@ -26,3 +26,5 @@ yarn-error.log*
 .eslintcache
 
 readme.md
+bun.lock
+LICENSE.MD
